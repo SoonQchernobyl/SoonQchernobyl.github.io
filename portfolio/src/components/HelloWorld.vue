@@ -1,339 +1,157 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <body class="fp-viewing-0" style="overflow: hidden; height: 100%">
-      <header>
-        <input type="checkbox" name="" id="dark-mode" />
-        <label for="dark-mode" class="switch"></label>
-      </header>
-      <main
-        id="fullpage"
-        class="fullpage-wrapper"
-        style="
-          height: 100%;
-          position: relative;
-          touch-action: none;
-          transform: translate3d(0px, 0px, 0px);
-          transition: all 700ms ease 0s;
-        "
-      >
-        <section
-          class="section about black fp-section fp-table"
-          style="height: 919px"
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+      <link rel="icon" href="/favicon.ico" />
+      <title>portfolio</title>
+    </head>
+    <body class="" style="">
+      <noscript>
+        <strong
+          >We're sorry but portfolio doesn't work properly without JavaScript
+          enabled. Please enable it to continue.</strong
         >
-          <div class="fp-tableCell" style="height: 919px">
-            <div class="title">
-              <h3 class="grow bold black-point">"호기심으로"</h3>
-              <h1 class="bold">
-                개발에 몰입하는 개발자 <br />
-                양승규 입니다<span class="black-point">.</span>
-              </h1>
-              <div class="aboutMe normal">
-                <p class="black-point">
-                  “노력은 기회를 만들고, 기회는 경험을 만들고, 경험은 지식을
-                  만든다.”
-                </p>
-                라는 가치관으로 무엇이든 경험하려고 합니다. <br />
-                꾸준한 노력 덕에 교내대회에서 수상하여 외부에서 다양한 부스
-                운영한 경험이 있습니다. <br />
-                <br />
-
-                <p class="black-point">사용자 경험을 중요하게 생각합니다.</p>
-                기존에 불편했던 학교 입학 지원 서비스, 학교 공식 홈페이지를
-                개발한 경험이 있습니다.<br />
-                총 2,000명 이상의 사용자가 접속하였고, 검색엔진에 약 3,000번
-                노출되었습니다.<br />
-                <br />
-
-                <p class="black-point">
-                  지식을 다른 사람들과 공유하고, 기록하는 것을 좋아합니다.
-                </p>
-                스터디를 기획하고 운영하며 지식을 나누고 팀원들과 함께
-                성장하려고 합니다. <br />
-                블로그를 운영하고, 다양한 주제에 대해 60개 이상의 포스팅을
-                작성하였습니다.
-              </div>
-            </div>
-          </div>
-        </section>
-        <section
-          class="section skills black fp-section fp-table"
-          style="height: 919px"
-        >
-          <div class="fp-tableCell" style="height: 919px">
-            <h2 class="skill-title bold">
-              저는
-              <span class="black-point">_ _ _ _</span>
-              를 잘해요<span class="black-point">.</span>
-            </h2>
-            <div class="skill">
-              <div class="value">
-                <h3 class="bold">NextJS</h3>
-                <p class="explain normal"></p>
-              </div>
-              <div class="value">
-                <h3 class="bold">JavaScript &amp; TypeScript</h3>
-                <p class="explain normal">
-                  ES6 자바스크립트 문법을 사용합니다. <br />
-                  TypeScript 문법에 익숙합니다. <br />
-                  TypeGuard 문법을 프로젝트에 적용한 적이 있습니다.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section
-          class="section skills black fp-section fp-table"
-          style="height: 919px"
-        >
-          <div class="fp-tableCell" style="height: 919px">
-            <h2 class="skill-title bold">
-              저는
-              <span class="black-point">_ _ _ _</span>
-              를 잘해요<span class="black-point">.</span>
-            </h2>
-            <div class="skill">
-              <div class="value">
-                <h3 class="bold">ReactJS</h3>
-                <p class="explain normal">
-                  Recoil을 이용하여 전역 상태관리를 할 수 있습니다 <br />
-                  함수형 컴포넌트 문법에 익숙합니다. <br />
-                  React hooks를 능숙하게 사용합니다. <br />
-                </p>
-              </div>
-              <div class="value">
-                <h3 class="bold">GIT</h3>
-                <p class="explain normal">
-                  git을 사용하여 프로젝트 관리를 합니다. <br />
-                  git-flow에 대해 압니다. <br />
-                  GitKraken을 사용할 수 있습니다. <br />
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section
-          class="section skills black fp-section fp-table"
-          style="height: 919px"
-        >
-          <div class="fp-tableCell" style="height: 919px">
-            <h2 class="skill-title bold experience">
-              저는
-              <span class="black-point">_ _ _ _</span>
-              를 사용한 적이 있어요<span class="black-point">.</span>
-            </h2>
-            <div class="bold skill">
-              <h3 class="value">React Query</h3>
-              <h3 class="value">EmotionJS</h3>
-              <h3 class="value">Styled-Components</h3>
-            </div>
-            <div class="bold skill"></div>
-          </div>
-        </section>
-        <section
-          class="section projects white fp-section fp-table"
-          style="height: 919px"
-        >
-          <div class="fp-tableCell" style="height: 919px">
-            <h2 class="project-title bold">
-              <span class="white-point">_ _ _ _</span>
-              를 만들어 보았습니다<span class="white-point">.</span>
-            </h2>
-            <div class="wrap">
-              <div class="box">
-                <div class="project">
-                  <hr class="line" />
-                  <div class="inline">
-                    <span class="number medium text"> 01</span>
-                    <a
-                      href="https://github.com/themoment-team/official-gsm-front"
-                      target="_blank"
-                    >
-                      <img
-                        class="code-link"
-                        src="https://github.githubassets.com/favicons/favicon.png"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <a href="https://official.hellogsm.kr/" target="_blank">
-                    <p class="medium">Hello, GSM</p>
-                    <p class="normal">
-                      광주소프트웨어마이스터고등학교 공식홈페이지 입니다.
-                    </p>
-                  </a>
+      </noscript>
+      <div id="app" data-v-app="">
+        <div class="hello">
+          <h1>개발자 양승규 Portfolio</h1>
+          <header></header>
+          <main
+            id="fullpage"
+            class="fullpage-wrapper"
+            style="
+              height: 100%;
+              position: relative;
+              touch-action: none;
+              transform: translate3d(0px, 0px, 0px);
+              transition: all 700ms ease 0s;
+            "
+          >
+            <section
+              class="section about black fp-section fp-table"
+              style="height: 919px"
+            >
+              <div class="fp-tableCell" style="height: 919px">
+                <div class="title">
+                  <h3 class="grow bold black-point">"호기심으로"</h3>
+                  <h1 class="bold">
+                    개발에 몰입하는 개발자 <br />
+                    양승규 입니다<span class="black-point">.</span>
+                  </h1>
                 </div>
-                <div class="project">
-                  <hr class="line" />
-                  <div class="inline">
-                    <span class="number medium text"> 02</span>
-                    <a
-                      href="https://github.com/themoment-team/hello-gsm-front"
-                      target="_blank"
-                    >
-                      <img
-                        class="code-link"
-                        src="https://github.githubassets.com/favicons/favicon.png"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <a href="https://hellogsm.kr/" target="_blank">
-                    <p class="medium">Hello, GSM</p>
-                    <p class="normal">
-                      광주소프트웨어마이스터고등학교 입학 지원시스템 입니다.
-                    </p>
-                  </a>
-                </div>
-                <div class="project">
-                  <hr class="line" />
-                  <div class="inline">
-                    <span class="number medium text"> 03</span>
-                    <a href="https://github.com/yoosion030/GGV" target="_blank">
-                      <img
-                        class="code-link"
-                        src="https://github.githubassets.com/favicons/favicon.png"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <a
-                    href="https://gsm-golden-village.vercel.app/"
-                    target="_blank"
+              </div>
+            </section>
+            <section
+              class="section skills black fp-section fp-table"
+              style="height: 919px"
+            >
+              <div class="fp-tableCell" style="height: 919px">
+                <h2 class="skill-title bold">
+                  저는 <span class="black-point">_ _ _ _</span> 를 잘해요<span
+                    class="black-point"
+                    >.</span
                   >
-                    <p class="medium">GGV</p>
-                    <p class="normal">
-                      Open API를 이용한 해외 영화 소개 서비스 입니다.
+                </h2>
+                <div class="skill">
+                  <div class="value">
+                    <h3 class="bold">ReactJS</h3>
+                    <p class="explain normal">
+                      Recoil을 이용하여 전역 상태관리를 할 수 있습니다 <br />
+                      함수형 컴포넌트 문법에 익숙합니다. <br />
+                      React hooks를 능숙하게 사용합니다. <br />
                     </p>
-                  </a>
-                </div>
-              </div>
-              <div class="box">
-                <div class="project">
-                  <hr class="line" />
-                  <div class="inline">
-                    <span class="number medium text"> 04</span>
-                    <a
-                      href="https://github.com/themoment-team/whiteday-front"
-                      target="_blank"
-                    >
-                      <img
-                        class="code-link"
-                        src="https://github.githubassets.com/favicons/favicon.png"
-                        alt=""
-                      />
-                    </a>
                   </div>
-                  <a href="https://www.givecandy.me/" target="_blank">
-                    <p class="medium">WhiteDay</p>
-                    <p class="normal">
-                      화이트 데이때 친구들에게 메시지를 보내는 서비스입니다.
+                  <div class="value">
+                    <h3 class="bold">GIT</h3>
+                    <p class="explain normal">
+                      git을 사용하여 프로젝트 관리를 합니다. <br />
+                      git-flow에 대해 압니다. <br />
+                      GitKraken을 사용할 수 있습니다. <br />
                     </p>
-                  </a>
-                </div>
-                <div class="project">
-                  <hr class="line" />
-                  <div class="inline">
-                    <span class="number medium text"> 05</span>
-                    <a
-                      href="https://github.com/yoosion030/Loven"
-                      target="_blank"
-                    >
-                      <img
-                        class="code-link"
-                        src="https://github.githubassets.com/favicons/favicon.png"
-                        alt=""
-                      />
-                    </a>
                   </div>
-                  <a href="https://loven.vercel.app/" target="_blank">
-                    <p class="medium">Loven</p>
-                    <p class="normal">
-                      주변 친구를 칭찬하기 위해 간단하게 상장을 제작할 수 있는
-                      서비스입니다.
-                    </p>
-                  </a>
                 </div>
-                <div class="project">
-                  <hr class="line" />
-                  <div class="inline">
-                    <span class="number medium text"> 06</span>
-                    <a href="https://github.com/Make-Maze" target="_blank">
-                      <img
-                        class="code-link"
-                        src="https://github.githubassets.com/favicons/favicon.png"
-                        alt=""
-                      />
-                    </a>
+              </div>
+            </section>
+            <section
+              class="section projects white fp-section fp-table"
+              style="height: 919px"
+            >
+              <div class="fp-tableCell" style="height: 919px">
+                <h2 class="project-title bold">
+                  <span class="white-point">_ _ _ _</span> 를 만들어
+                  보았습니다<span class="white-point">.</span>
+                </h2>
+                <div class="wrap">
+                  <div class="box">
+                    <div class="project">
+                      <hr class="line" />
+                      <div class="inline">
+                        <span class="number medium text"> 01</span
+                        ><a
+                          href="https://github.com/themoment-team/official-gsm-front"
+                          target="_blank"
+                          ><img
+                            class="code-link"
+                            src="https://github.githubassets.com/favicons/favicon.png"
+                            alt=""
+                        /></a>
+                      </div>
+                      <a href="https://official.hellogsm.kr/" target="_blank"
+                        ><p class="medium">Lotical</p>
+                        <p class="normal">MMORPG LostArk's tool site</p></a
+                      >
+                    </div>
+                    <div class="project">
+                      <hr class="line" />
+                      <div class="inline">
+                        <span class="number medium text"> 02</span
+                        ><a
+                          href="https://github.com/themoment-team/hello-gsm-front"
+                          target="_blank"
+                          ><img
+                            class="code-link"
+                            src="https://github.githubassets.com/favicons/favicon.png"
+                            alt=""
+                        /></a>
+                      </div>
+                      <a href="https://hellogsm.kr/" target="_blank"
+                        ><p class="medium">SPOTIMUSIC</p>
+                        <p class="normal">Find Your Music In Spotify</p></a
+                      >
+                    </div>
                   </div>
-                  <a href="https://github.com/Make-Maze" target="_blank">
-                    <p class="medium">M&amp;M</p>
-                    <p class="normal">
-                      사용자가 직접 미로를 만들어 다른사람들과 공유하는
-                      웹서비스를 만들었습니다.
-                    </p>
-                  </a>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-        <footer class="section black fp-section fp-table" style="height: 919px">
-          <div class="fp-tableCell" style="height: 919px">
-            <div class="contact">
-              <h3 class="medium">
-                구경하고 가세요<span class="black-point">.</span>
-              </h3>
-              <div class="icons">
-                <a
-                  href="https://github.com/yoosion030"
-                  class="logo"
-                  target="_blank"
-                >
-                  <img
-                    class="logo"
-                    src="data:image/png;base64,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"
-                    alt="github_logo"
-                  />
-                </a>
-                <a
-                  href="https://velog.io/@yoosion030"
-                  class="logo"
-                  target="_blank"
-                >
-                  <img
-                    class="logo"
-                    src="https://pbs.twimg.com/profile_images/1228368893321736193/Ov0og7E8.jpg"
-                    alt=""
-                  />
-                </a>
-                <a
-                  href="https://sion-log.vercel.app/"
-                  class="logo"
-                  target="_blank"
-                >
-                  <img class="logo" src="images/avatar.svg" alt="" />
-                </a>
+            </section>
+            <footer
+              class="section black fp-section fp-table"
+              style="height: 100px"
+            >
+              <div class="fp-tableCell" style="height: 0">
+                <div class="contact">
+                  <h3 class="medium">
+                    여기로 연락 주세요<span class="black-point">.</span>
+                  </h3>
+                  <div class="icons">
+                    <p class="normal">
+                      <a
+                        href="mailto:yoosioff@gmail.com"
+                        class="e-mail"
+                        target="_blank"
+                        >yoosioff@gmail.com</a
+                      >
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="contact">
-              <h3 class="medium">
-                여기로 연락 주세요<span class="black-point">.</span>
-              </h3>
-              <div class="icons">
-                <p class="normal">
-                  <a
-                    href="mailto:yoosioff@gmail.com"
-                    class="e-mail"
-                    target="_blank"
-                    >yoosioff@gmail.com</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-        </footer>
-      </main>
+            </footer>
+          </main>
+        </div>
+      </div>
+      <!-- Code injected by live-server -->
     </body>
   </div>
 </template>

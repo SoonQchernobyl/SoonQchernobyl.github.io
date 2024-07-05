@@ -274,4 +274,8 @@ legend {
   font-size: 0;
   clear: both;
   content: "";
-}/*# sourceMappingURL=styles.css.map */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;/*# sourceMappingURL=styles.css.map */
