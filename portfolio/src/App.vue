@@ -1,5 +1,4 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="개발자 양승규 Portfolio" />
 </template>
 
@@ -14,6 +13,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import "./assets/styles/styles.scss";
+<style lang="css">
+@import "./assets/styles/main.css";
 </style>
