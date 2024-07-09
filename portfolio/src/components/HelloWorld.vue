@@ -6,78 +6,51 @@
     <link rel="icon" href="/favicon.ico" />
     <title>portfolio</title>
   </head>
-  <body class="" style="">
-    <noscript>
-      <strong
-        >We're sorry but portfolio doesn't work properly without JavaScript
-        enabled. Please enable it to continue.</strong
+  <body class="">
+    <div
+      class="w-screen h-screen bg-gray-500 flex justify-center items-center p-10"
+    >
+      <div class="w-full h-full bg-black shadow-lg">
+        <div class="w-full h-full border-2 border-white flex">
+          <ol class="relative flex flex-wrap flex-col">
+            <li class="absolute text-white top-10"><div>Column 1</div></li>
+            <li class="absolute text-white top-20"><div>Column 2</div></li>
+            <li class="absolute text-white top-30"><div>Column 3</div></li>
+            <li class="absolute text-white top-40"><div>Column 4</div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <main class="">
+      <section
+        class="flex justify-between bg-black text-white pr-80 pl-80 pt-60 items-start"
+        style="height: 950px"
       >
-    </noscript>
-    <header></header>
-    <main></main>
-    <section
-      class="flex items-center justify-between bg-black text-white"
-      style="height: 950px"
-    >
-      <div>
-        <h3>"호기심으로"</h3>
-        <h1>
-          개발에 몰입하는 개발자 <br />
-          양승규 입니다<span>.</span>
-        </h1>
-      </div>
-    </section>
-    <section
-      class="flex items-center justify-center bg-white text-black"
-      style="height: 950px"
-    >
-      <div>
-        <h2>저는 <span>_ _ _ _</span> 를 잘해요<span>.</span></h2>
-        <div>
-          <div>
-            <h3>ReactJS</h3>
-            <p>
-              Recoil을 이용하여 전역 상태관리를 할 수 있습니다 <br />
-              함수형 컴포넌트 문법에 익숙합니다. <br />
-              React hooks를 능숙하게 사용합니다. <br />
-            </p>
-          </div>
-          <div>
-            <h3>GIT</h3>
-            <p>
-              git을 사용하여 프로젝트 관리를 합니다. <br />
-              git-flow에 대해 압니다. <br />
-              GitKraken을 사용할 수 있습니다. <br />
-            </p>
-          </div>
+        <div class="leading-relaxed">
+          <h1 class="text-6xl leading-relaxed">개발자 양승규 입니다.</h1>
+          <h3>Portfolio Page</h3>
         </div>
-      </div>
-    </section>
-    <section
-      class="flex items-center justify-between bg-black text-white"
-      style="height: 950px"
-    >
-      <div>
-        <h2 class="">
-          <span>_ _ _ _</span> 를 만들어 보았습니다<span>.</span>
-        </h2>
-        <div></div>
-      </div>
-    </section>
-    <footer>
-      <div>
-        <div>
-          <h3>여기로 연락 주세요<span>.</span></h3>
-          <div>
-            <p>
-              <a href="mailto:yoosioff@gmail.com" class="e-mail" target="_blank"
-                >soongq426@gmail.com</a
-              >
-            </p>
-          </div>
+      </section>
+      <section
+        class="flex justify-between bg-white text-black pr-80 pl-80 pt-60 items-start"
+        style="height: 950px"
+      >
+        <div class="leading-relaxed">
+          <h1 class="text-6xl leading-relaxed">Who am i?</h1>
+          <h3>Concept page</h3>
         </div>
-      </div>
-    </footer>
+      </section>
+      <section
+        class="flex justify-between bg-black text-white pr-80 pl-80 pt-60 items-start"
+        style="height: 950px"
+      >
+        <div class="leading-relaxed">
+          <h1 class="text-6xl leading-relaxed">I Made ...</h1>
+          <h3>Project Page</h3>
+        </div>
+      </section>
+    </main>
   </body>
 </template>
 
@@ -91,4 +64,12 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+body {
+  overflow-x: hidden;
+}
+</style>
