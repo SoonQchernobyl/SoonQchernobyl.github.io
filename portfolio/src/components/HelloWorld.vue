@@ -1,75 +1,119 @@
 <template>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link rel="icon" href="/favicon.ico" />
-    <title>portfolio</title>
-  </head>
-  <body class="">
-    <div
-      class="w-screen h-screen bg-gray-500 flex justify-center items-center p-10"
-    >
-      <div class="w-full h-full bg-black shadow-lg">
-        <div class="w-full h-full border-2 border-white flex">
-          <ol class="relative flex flex-wrap flex-col">
-            <li class="absolute text-white top-10"><div>Column 1</div></li>
-            <li class="absolute text-white top-20"><div>Column 2</div></li>
-            <li class="absolute text-white top-30"><div>Column 3</div></li>
-            <li class="absolute text-white top-40"><div>Column 4</div></li>
-          </ol>
-        </div>
-      </div>
-    </div>
+  <div class="w-screen h-screen bg-gray-500 flex justify-center items-center p-10">
+    <div class="w-full h-full bg-black shadow-lg relative overflow-hidden">
+      <!-- Vertical Menu -->
+      <ol class="absolute top-10 left-10 z-10 text-white">
+        <li class="mb-4">Home</li>
+        <li class="mb-4">Development Philosophy</li>
+        <li class="mb-4">Projects</li>
+        <li class="mb-4">Contact</li>
+      </ol>
 
-    <main class="">
-      <section
-        class="flex justify-between bg-black text-white pr-80 pl-80 pt-60 items-start"
-        style="height: 950px"
+      <swiper
+        :effect="'creative'"
+        :creativeEffect="{
+          prev: {
+            shadow: true,
+            translate: [0, '-100%', -500],
+          },
+          next: {
+            shadow: true,
+            translate: [0, '100%', -500],
+          },
+        }"
+        :modules="modules"
+        :direction="'vertical'"
+        :mousewheel="true"
+        :loop="true"
+        class="mySwiper w-full h-full"
       >
-        <div class="leading-relaxed">
-          <h1 class="text-6xl leading-relaxed">개발자 양승규 입니다.</h1>
-          <h3>Portfolio Page</h3>
-        </div>
-      </section>
-      <section
-        class="flex justify-between bg-white text-black pr-80 pl-80 pt-60 items-start"
-        style="height: 950px"
-      >
-        <div class="leading-relaxed">
-          <h1 class="text-6xl leading-relaxed">Who am i?</h1>
-          <h3>Concept page</h3>
-        </div>
-      </section>
-      <section
-        class="flex justify-between bg-black text-white pr-80 pl-80 pt-60 items-start"
-        style="height: 950px"
-      >
-        <div class="leading-relaxed">
-          <h1 class="text-6xl leading-relaxed">I Made ...</h1>
-          <h3>Project Page</h3>
-        </div>
-      </section>
-    </main>
-  </body>
+        <swiper-slide>
+          <section class="flex justify-between bg-black text-white pr-80 pl-80 pt-60 items-start h-full">
+            <div class="leading-relaxed">
+              <h1 class="text-6xl leading-relaxed">개발자 양승규 입니다.</h1>
+              <h3>Portfolio Page</h3>
+            </div>
+          </section>
+        </swiper-slide>
+        <swiper-slide>
+          <section class="flex justify-between bg-black text-white pr-80 pl-80 pt-60 items-start h-full">
+            <div class="leading-relaxed">
+              <h1 class="text-6xl leading-relaxed">Who am i?</h1>
+              <h3>Development Philosophy</h3>
+            </div>
+          </section>
+        </swiper-slide>
+        <swiper-slide>
+          <section class="flex flex-col justify-start bg-black text-white pr-80 pl-80 pt-60 items-start h-full">
+            <div class="leading-relaxed mb-20">
+              <h1 class="text-6xl leading-relaxed">I Made ...</h1>
+              <h3>Projects</h3>
+            </div>
+            <div class="grid grid-cols-2 gap-4 w-full">
+              <div class="bg-gray-800 p-4 rounded border border-white">
+                <h4 class="text-xl mb-2">Project 1</h4>
+                <p>Description of Project 1</p>
+                <a href="#" class="text-blue-400 hover:underline">Link to Project 1</a>
+              </div>
+              <div class="bg-gray-800 p-4 rounded border border-white">
+                <h4 class="text-xl mb-2">Project 2</h4>
+                <p>Description of Project 2</p>
+                <a href="#" class="text-blue-400 hover:underline">Link to Project 2</a>
+              </div>
+              <div class="bg-gray-800 p-4 rounded border border-white">
+                <h4 class="text-xl mb-2">Project 3</h4>
+                <p>Description of Project 3</p>
+                <a href="#" class="text-blue-400 hover:underline">Link to Project 3</a>
+              </div>
+              <div class="bg-gray-800 p-4 rounded border border-white">
+                <h4 class="text-xl mb-2">Project 4</h4>
+                <p>Description of Project 4</p>
+                <a href="#" class="text-blue-400 hover:underline">Link to Project 4</a>
+              </div>
+            </div>
+          </section>
+        </swiper-slide>
+        <swiper-slide>
+          <section class="flex justify-between bg-black text-white pr-80 pl-80 pt-60 items-start h-full">
+            <div class="leading-relaxed">
+              <h1 class="text-6xl leading-relaxed">Contact right now!</h1>
+              <h3>Contact</h3>
+            </div>
+          </section>
+        </swiper-slide>
+      </swiper>
+    </div>
+  </div>
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { EffectCreative, Mousewheel } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-creative';
+import 'swiper/css/mousewheel';
+
 export default {
-  name: "HelloWorld",
-  props: {
-    msg: String,
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    return {
+      modules: [EffectCreative, Mousewheel],
+    };
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-* {
-  box-sizing: border-box;
-  max-width: 100%;
+.swiper {
+  width: 100%;
+  height: 100%;
 }
-body {
-  overflow-x: hidden;
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
 }
 </style>
