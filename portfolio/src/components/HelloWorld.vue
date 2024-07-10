@@ -9,14 +9,17 @@
       <div class="flex h-full">
         <!-- Vertical Menu -->
         <ol class="menu text-white p-4">
-          <li class="mb-4">Home</li>
-          <li class="mb-4">Development Philosophy</li>
-          <li class="mb-4">Projects</li>
-          <li class="mb-4">Contact</li>
+          <li class="mb-4 cursor-pointer" @click="goToSlide(0)">Home</li>
+          <li class="mb-4 cursor-pointer" @click="goToSlide(1)">
+            Development Philosophy
+          </li>
+          <li class="mb-4 cursor-pointer" @click="goToSlide(2)">Projects</li>
+          <li class="mb-4 cursor-pointer" @click="goToSlide(3)">Contact</li>
         </ol>
 
         <!-- Swiper Container -->
         <swiper
+          ref="swiperRef"
           :speed="800"
           :effect="'creative'"
           :creativeEffect="{
@@ -127,6 +130,7 @@ import "swiper/css";
 import "swiper/css/effect-creative";
 import "swiper/css/mousewheel";
 import "swiper/css/pagination";
+import { ref } from "vue";
 
 export default {
   components: {
@@ -134,8 +138,19 @@ export default {
     SwiperSlide,
   },
   setup() {
+    const swiperRef = ref(null); // Swiper 인스턴스를 참조하기 위한 ref 생성
+
+    // 슬라이드 번호를 인자로 받아 해당 슬라이드로 이동하는 함수
+    const goToSlide = (slideIndex) => {
+      if (swiperRef.value) {
+        swiperRef.value.slideTo(slideIndex);
+      }
+    };
+
     return {
       modules: [EffectCreative, Mousewheel, Pagination],
+      goToSlide,
+      swiperRef, // Swiper 컴포넌트에 ref를 연결하기 위해 반환
     };
   },
 };
