@@ -18,7 +18,7 @@
         </ol>
 
         <!-- Swiper Container -->
-        <swiper
+        <CustomSwiper
           ref="swiperRef"
           :speed="800"
           :effect="'creative'"
@@ -42,19 +42,19 @@
           :loop="true"
           class="mySwiper w-full h-full"
         >
-          <swiper-slide>
+          <CustomSwiperSlide>
             <section
               class="flex justify-between bg-black bg-opacity-70 text-white p-10 m-10 h-[calc(100%-5rem)] border-thick"
             >
               <div class="leading-relaxed">
                 <h1 class="text-6xl leading-relaxed scrawl-font">
-                  개발자 양승규 입니다.
+                  Hi, I'm Cheru!
                 </h1>
                 <h3>Home</h3>
               </div>
             </section>
-          </swiper-slide>
-          <swiper-slide>
+          </CustomSwiperSlide>
+          <CustomSwiperSlide>
             <section
               class="flex justify-between bg-black bg-opacity-70 text-white p-10 m-10 h-[calc(100%-5rem)] border-thick"
             >
@@ -63,8 +63,8 @@
                 <h3>Development Philosophy</h3>
               </div>
             </section>
-          </swiper-slide>
-          <swiper-slide>
+          </CustomSwiperSlide>
+          <CustomSwiperSlide>
             <section
               class="flex flex-col justify-start bg-black bg-opacity-70 text-white p-10 m-10 h-[calc(100%-5rem)] border-thick"
             >
@@ -103,8 +103,8 @@
                 </div>
               </div>
             </section>
-          </swiper-slide>
-          <swiper-slide>
+          </CustomSwiperSlide>
+          <CustomSwiperSlide>
             <section
               class="flex justify-between bg-black bg-opacity-70 text-white p-10 m-10 h-[calc(100%-5rem)] border-thick"
             >
@@ -115,8 +115,8 @@
                 <h3>Contact</h3>
               </div>
             </section>
-          </swiper-slide>
-        </swiper>
+          </CustomSwiperSlide>
+        </CustomSwiper>
         <div class="swiper-pagination"></div>
       </div>
     </div>
@@ -124,33 +124,14 @@
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { EffectCreative, Mousewheel, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-creative";
-import "swiper/css/mousewheel";
-import "swiper/css/pagination";
-import { ref } from "vue";
+import useSwiper from "./swiper.js";
 
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
   setup() {
-    const swiperRef = ref(null); // Swiper 인스턴스를 참조하기 위한 ref 생성
-
-    // 슬라이드 번호를 인자로 받아 해당 슬라이드로 이동하는 함수
-    const goToSlide = (slideIndex) => {
-      if (swiperRef.value) {
-        swiperRef.value.slideTo(slideIndex);
-      }
-    };
-
+    const { swiperRef, goToSlide } = useSwiper();
     return {
-      modules: [EffectCreative, Mousewheel, Pagination],
+      swiperRef,
       goToSlide,
-      swiperRef, // Swiper 컴포넌트에 ref를 연결하기 위해 반환
     };
   },
 };
@@ -159,23 +140,12 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
-.swiper {
-  width: 150%;
-  height: 100%;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-}
-
 .scrawl-font {
   font-family: "Permanent Marker", cursive;
 }
 
 .cmd-background {
   position: relative;
-  /* background-image: url("https://www.shutterstock.com/shutterstock/videos/8617789/thumb/1.jpg ");  */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -188,22 +158,12 @@ export default {
   border: 5px solid #533d7a; /* Thicker border */
 }
 
-.swiper-pagination {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-}
-
-.swiper-pagination-bullet {
-  opacity: 0;
-}
-
-.swiper-pagination-bullet-active {
-  opacity: 1;
+.section-bg {
+  background: linear-gradient(
+      to right,
+      rgba(245, 245, 245, 0.8),
+      rgba(245, 245, 245, 0.8)
+    ),
+    url("https://www.rammaheshwari.com/assets/svg/common-bg.svg");
 }
 </style>
